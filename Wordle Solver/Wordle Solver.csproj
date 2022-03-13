@@ -43,11 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Guesser.cs" />
-    <Compile Include="Probability.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="src\Guesser.cs" />
+    <Compile Include="src\Probability.cs" />
+    <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WordleLookup.cs" />
+    <Compile Include="src\WordleLookup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
