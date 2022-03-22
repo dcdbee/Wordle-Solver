@@ -32,7 +32,10 @@ namespace Wordle_Solver
                 if (choice == "1")
                 {
                     DateTime now = DateTime.Now;
-                    DateTime start = DateTime.Now.AddDays(-267);
+                    int day = 19;
+                    int month = 6;
+                    int year = 2021;
+                    DateTime start = new DateTime(year, month, day);
 
                     TimeSpan t = now - start;
                     int NrOfDays = (int)t.TotalDays;
@@ -51,9 +54,14 @@ namespace Wordle_Solver
                     int month = int.Parse(date[1]);
                     int year = int.Parse(date[2]);
                     DateTime temp = new DateTime(year,month,day);
-                    DateTime now = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-                    TimeSpan t = now - temp;
-                    int NrOfDays = 267-(int)t.TotalDays;
+
+                    int day2 = 19;
+                    int month2 = 6;
+                    int year2 = 2021;
+                    DateTime td = new DateTime(year2, month2, day2);
+
+                    TimeSpan t = temp - td;
+                    int NrOfDays = (int)t.TotalDays;
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"The wordle for {date[0]}/{date[1]}/{date[2]} is {words[NrOfDays]}");
                     Console.ResetColor();
